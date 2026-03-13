@@ -2,7 +2,7 @@ const express=require("express")
 
 const router=express.Router();
 const {checkForUser, checkIfUserExist}=require("../controllers/user")
-const {checkGetUserUid,redirectIfLoggedIn}=require("../middleware/user")
+const {checkGetUserUid,redirectIfLoggedIn}=require("../middlewares/user")
 
 router.post("/signup",checkForUser);
 router.post("/login",checkIfUserExist);

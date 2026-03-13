@@ -7,7 +7,7 @@ const cors = require('cors');
 const cookieParser=require("cookie-parser");
 require('dotenv').config();
 
-connectMongodb("mongodb:url")
+connectMongodb(process.env.URL)
 .then(()=>{console.log("mongodb connected succesfully")});
 app.use(cors()); 
 app.use(express.json());
